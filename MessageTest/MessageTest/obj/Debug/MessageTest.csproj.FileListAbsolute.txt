@@ -1,0 +1,9 @@
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\bin\Debug\MessageTest.exe.config
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\bin\Debug\MessageTest.exe
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\bin\Debug\MessageTest.pdb
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\obj\Debug\MessageTest.csprojResolveAssemblyReference.cache
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\obj\Debug\MessageTest.Form1.resources
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\obj\Debug\MessageTest.Properties.Resources.resources
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\obj\Debug\MessageTest.csproj.GenerateResource.Cache
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\obj\Debug\MessageTest.exe
+C:\Users\Elessandra\cursoscaelum\csharp\csharp\MessageTest\MessageTest\obj\Debug\MessageTest.pdb
