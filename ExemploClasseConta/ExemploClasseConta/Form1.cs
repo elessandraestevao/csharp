@@ -22,19 +22,39 @@ namespace ExemploClasseConta
             Conta conta = new Conta();
             conta.numero = 00001;
             conta.saldo = 5000.0;
-            conta.titular = "Marina Costa Silva";
 
-            MessageBox.Show("Nome do titular é: " + conta.titular);
+            Cliente cliente = new Cliente();
+            conta.titular = cliente;
+            conta.titular.nome = "Marina Costa Silva";
+
+            MessageBox.Show("Nome do titular é: " + conta.titular.nome);
 
             Conta contaDois = new Conta();
             contaDois.numero = 00002;
             contaDois.saldo = 400.0;
-            contaDois.titular = "José Carlos";
-            contaDois.agencia = 0909;
-            contaDois.cpf = "09009009080";
+            Cliente cliente2 = new Cliente();
+            contaDois.titular = cliente2;
+            contaDois.titular.nome = "José Carlos";
+            cliente2.idade = 17;
 
-            MessageBox.Show("Segunda Conta ---- Titular: " + contaDois.titular + " Saldo: " + contaDois.saldo
-                + " Número: " + contaDois.numero + " Agência: " + contaDois.agencia);
+            MessageBox.Show("Maior de idade: " + cliente2.EhMaiorDeIdade());           
+            
+
+            if(contaDois.Saca(300.0))
+            {
+                MessageBox.Show("Saque realizado com sucesso.");
+            }
+            else
+            {
+                MessageBox.Show("Saque não realizado.");
+            }
+
+            MessageBox.Show("Saldo da conta após saque: " + contaDois.saldo);
+
+            
+
+            MessageBox.Show("Segunda Conta ---- Titular: " + contaDois.titular.nome + " Saldo: " + contaDois.saldo
+                + " Número: " + contaDois.numero);
         }
     }
 }

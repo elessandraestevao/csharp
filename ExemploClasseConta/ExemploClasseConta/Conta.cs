@@ -9,14 +9,31 @@ namespace ExemploClasseConta
     class Conta
     {
         public double saldo;
-        public string titular;
-        public int numero;
-        public string cpf;
-        public int agencia;
-
-        public void Saca(double valor)
+        public Cliente titular;
+        public int numero;        
+        
+        public bool Saca(double valor)
         {
-            this.saldo -= valor;
+            if(valor >= 0 && valor <= this.saldo)
+            {                
+                if (titular.EhMaiorDeIdade())
+                {
+                    this.saldo -= valor;                    
+                }
+                else
+                {
+                    if (valor > 200)
+                    {
+                        valor = 200;                        
+                    }
+                    this.saldo -= valor;
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }            
         }
 
         public void Deposita(double valor)
