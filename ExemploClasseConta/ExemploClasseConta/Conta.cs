@@ -8,17 +8,17 @@ namespace ExemploClasseConta
 {
     class Conta
     {
-        public double saldo;
-        public Cliente titular;
-        public int numero;        
+        public double Saldo{get; private set;}
+        public Cliente Titular {get; set;}
+        public int Numero { get; set; }        
         
         public bool Saca(double valor)
         {
-            if(valor >= 0 && valor <= this.saldo)
+            if(valor >= 0 && valor <= this.Saldo)
             {                
-                if (titular.EhMaiorDeIdade())
+                if (Titular.EhMaiorDeIdade())
                 {
-                    this.saldo -= valor;                    
+                    this.Saldo -= valor;                    
                 }
                 else
                 {
@@ -26,7 +26,7 @@ namespace ExemploClasseConta
                     {
                         valor = 200;                        
                     }
-                    this.saldo -= valor;
+                    this.Saldo -= valor;
                 }
                 return true;
             }
@@ -38,7 +38,7 @@ namespace ExemploClasseConta
 
         public void Deposita(double valor)
         {
-            this.saldo += valor;
+            this.Saldo += valor;
         }
 
         public void Transfere(double valor, Conta destino)

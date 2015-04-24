@@ -20,22 +20,27 @@ namespace ExemploClasseConta
         private void button1_Click(object sender, EventArgs e)
         {
             Conta conta = new Conta();
-            conta.numero = 00001;
-            conta.saldo = 5000.0;
+            conta.Numero = 00001;
+            //conta.Saldo = 5000.0;
 
             Cliente cliente = new Cliente();
-            conta.titular = cliente;
-            conta.titular.nome = "Marina Costa Silva";
+            conta.Titular = cliente;
+            conta.Titular.Nome = "Marina Costa Silva";
 
-            MessageBox.Show("Nome do titular é: " + conta.titular.nome);
+            MessageBox.Show("Nome do titular é: " + conta.Titular.Nome);
 
             Conta contaDois = new Conta();
-            contaDois.numero = 00002;
-            contaDois.saldo = 400.0;
+            contaDois.Numero = 00002;
+            //contaDois.Saldo = 400.0;
             Cliente cliente2 = new Cliente();
-            contaDois.titular = cliente2;
-            contaDois.titular.nome = "José Carlos";
-            cliente2.idade = 17;
+            contaDois.Titular = cliente2;
+            contaDois.Titular.Nome = "José Carlos";
+            cliente2.Idade = 17;
+
+
+            /*TotalizadorDeContas totalizador = new TotalizadorDeContas();
+            Conta c = new Conta();
+            totalizador.Adiciona(c);*/
 
             MessageBox.Show("Maior de idade: " + cliente2.EhMaiorDeIdade());           
             
@@ -49,12 +54,12 @@ namespace ExemploClasseConta
                 MessageBox.Show("Saque não realizado.");
             }
 
-            MessageBox.Show("Saldo da conta após saque: " + contaDois.saldo);
+            MessageBox.Show("Saldo da conta após saque: " + contaDois.Saldo);
 
             
 
-            MessageBox.Show("Segunda Conta ---- Titular: " + contaDois.titular.nome + " Saldo: " + contaDois.saldo
-                + " Número: " + contaDois.numero);
+            MessageBox.Show("Segunda Conta ---- Titular: " + contaDois.Titular.Nome + " Saldo: " + contaDois.Saldo
+                + " Número: " + contaDois.Numero);
         }
     }
 }
