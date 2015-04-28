@@ -32,12 +32,16 @@
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.textoNumero = new System.Windows.Forms.TextBox();
             this.textoValor = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.botaoDepositaCC = new System.Windows.Forms.Button();
+            this.botaoSacaCC = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textoTotalizador = new System.Windows.Forms.TextBox();
+            this.botaoDepositaPP = new System.Windows.Forms.Button();
+            this.botaoSacaPP = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -68,25 +72,25 @@
             this.textoValor.Size = new System.Drawing.Size(100, 20);
             this.textoValor.TabIndex = 3;
             // 
-            // button1
+            // botaoDepositaCC
             // 
-            this.button1.Location = new System.Drawing.Point(345, 115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Depósito";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.botaoDepositaCC.Location = new System.Drawing.Point(345, 83);
+            this.botaoDepositaCC.Name = "botaoDepositaCC";
+            this.botaoDepositaCC.Size = new System.Drawing.Size(75, 23);
+            this.botaoDepositaCC.TabIndex = 4;
+            this.botaoDepositaCC.Text = "Depósito CC";
+            this.botaoDepositaCC.UseVisualStyleBackColor = true;
+            this.botaoDepositaCC.Click += new System.EventHandler(this.botaoDepositaCC_Click);
             // 
-            // button2
+            // botaoSacaCC
             // 
-            this.button2.Location = new System.Drawing.Point(345, 183);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Saque";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.botaoSacaCC.Location = new System.Drawing.Point(345, 157);
+            this.botaoSacaCC.Name = "botaoSacaCC";
+            this.botaoSacaCC.Size = new System.Drawing.Size(75, 23);
+            this.botaoSacaCC.TabIndex = 5;
+            this.botaoSacaCC.Text = "Saque CC";
+            this.botaoSacaCC.UseVisualStyleBackColor = true;
+            this.botaoSacaCC.Click += new System.EventHandler(this.botaoSacaCC_Click);
             // 
             // label1
             // 
@@ -124,17 +128,57 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Digite o valor";
             // 
+            // textoTotalizador
+            // 
+            this.textoTotalizador.Location = new System.Drawing.Point(325, 351);
+            this.textoTotalizador.Name = "textoTotalizador";
+            this.textoTotalizador.Size = new System.Drawing.Size(100, 20);
+            this.textoTotalizador.TabIndex = 11;
+            // 
+            // botaoDepositaPP
+            // 
+            this.botaoDepositaPP.Location = new System.Drawing.Point(345, 112);
+            this.botaoDepositaPP.Name = "botaoDepositaPP";
+            this.botaoDepositaPP.Size = new System.Drawing.Size(75, 23);
+            this.botaoDepositaPP.TabIndex = 12;
+            this.botaoDepositaPP.Text = "Depósito PP";
+            this.botaoDepositaPP.UseVisualStyleBackColor = true;
+            this.botaoDepositaPP.Click += new System.EventHandler(this.botaoDepositaPP_Click);
+            // 
+            // botaoSacaPP
+            // 
+            this.botaoSacaPP.Location = new System.Drawing.Point(345, 187);
+            this.botaoSacaPP.Name = "botaoSacaPP";
+            this.botaoSacaPP.Size = new System.Drawing.Size(75, 23);
+            this.botaoSacaPP.TabIndex = 13;
+            this.botaoSacaPP.Text = "Saque PP";
+            this.botaoSacaPP.UseVisualStyleBackColor = true;
+            this.botaoSacaPP.Click += new System.EventHandler(this.botaoSacaPP_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(56, 357);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Total das contas";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 261);
+            this.ClientSize = new System.Drawing.Size(534, 414);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.botaoSacaPP);
+            this.Controls.Add(this.botaoDepositaPP);
+            this.Controls.Add(this.textoTotalizador);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botaoSacaCC);
+            this.Controls.Add(this.botaoDepositaCC);
             this.Controls.Add(this.textoValor);
             this.Controls.Add(this.textoNumero);
             this.Controls.Add(this.textoSaldo);
@@ -153,12 +197,16 @@
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.TextBox textoNumero;
         private System.Windows.Forms.TextBox textoValor;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botaoDepositaCC;
+        private System.Windows.Forms.Button botaoSacaCC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textoTotalizador;
+        private System.Windows.Forms.Button botaoDepositaPP;
+        private System.Windows.Forms.Button botaoSacaPP;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -11,8 +11,9 @@ using System.Windows.Forms;
 namespace CursoOOCaixaEletronico
 {
     public partial class Form1 : Form
-    {
-        Conta conta = new Conta();
+    {        
+        ContaCorrente cc = new ContaCorrente();
+        ContaPoupanca cp = new ContaPoupanca();
         public Form1()
         {
             InitializeComponent();
@@ -20,30 +21,55 @@ namespace CursoOOCaixaEletronico
 
         private void Form1_Load(object sender, EventArgs e)
         {            
-            this.conta.Titular = "Victor";
-            this.conta.Deposita(250.0);
-            this.conta.Numero = 1;
+            this.cc.Titular = "Victor";
+            this.cc.Deposita(250.0);
+            this.cc.Numero = 1;
 
-            this.MostraConta();
+            this.cp.Titular = "Victor";
+            this.cp.Deposita(100.0);
+            this.cp.Numero = 2;
+
+            this.MostraConta(cc);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoDepositaCC_Click(object sender, EventArgs e)
         {
-            this.conta.Deposita(Convert.ToDouble(textoValor.Text));
-            this.MostraConta();
+            this.cc.Deposita(Convert.ToDouble(textoValor.Text));
+            this.MostraConta(cc);
         }
 
-        private void MostraConta()
+        private void MostraConta(Conta conta)
         {
-            textoTitular.Text = this.conta.Titular;
-            textoSaldo.Text = Convert.ToString(this.conta.Saldo);
-            textoNumero.Text = Convert.ToString(this.conta.Numero);
+            textoTitular.Text = conta.Titular;
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
+            textoNumero.Text = Convert.ToString(conta.Numero);
+            TotalizarContas();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoSacaCC_Click(object sender, EventArgs e)
         {
-            this.conta.Saca(Convert.ToDouble(textoValor.Text));
-            this.MostraConta();
+            this.cc.Saca(Convert.ToDouble(textoValor.Text));
+            this.MostraConta(cc);
+        }
+        
+        private void TotalizarContas()
+        {
+            TotalizadorDeContas tc = new TotalizadorDeContas();
+            tc.Adiciona(this.cc);
+            tc.Adiciona(this.cp);
+            textoTotalizador.Text = Convert.ToString(tc.SaldoTotal);
+        }
+
+        private void botaoDepositaPP_Click(object sender, EventArgs e)
+        {
+            this.cp.Deposita(Convert.ToDouble(textoValor.Text));
+            this.MostraConta(cp);
+        }
+
+        private void botaoSacaPP_Click(object sender, EventArgs e)
+        {
+            this.cp.Saca(Convert.ToDouble(textoValor.Text));
+            this.MostraConta(cp);
         }
     }
 }
