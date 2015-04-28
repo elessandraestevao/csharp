@@ -42,6 +42,20 @@
             this.botaoDepositaPP = new System.Windows.Forms.Button();
             this.botaoSacaPP = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboContas = new System.Windows.Forms.ComboBox();
+            this.textoTitularCombo = new System.Windows.Forms.TextBox();
+            this.textoNumeroCombo = new System.Windows.Forms.TextBox();
+            this.textoSaldoCombo = new System.Windows.Forms.TextBox();
+            this.textoValorComboBox = new System.Windows.Forms.TextBox();
+            this.botaoSacarComboBox = new System.Windows.Forms.Button();
+            this.botaoDepositarComboBox = new System.Windows.Forms.Button();
+            this.destinoDaTransferencia = new System.Windows.Forms.ComboBox();
+            this.textoTitularDestino = new System.Windows.Forms.TextBox();
+            this.textoNumeroDestino = new System.Windows.Forms.TextBox();
+            this.textoSaldoDestino = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.botaoTransferir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -130,7 +144,7 @@
             // 
             // textoTotalizador
             // 
-            this.textoTotalizador.Location = new System.Drawing.Point(325, 351);
+            this.textoTotalizador.Location = new System.Drawing.Point(320, 237);
             this.textoTotalizador.Name = "textoTotalizador";
             this.textoTotalizador.Size = new System.Drawing.Size(100, 20);
             this.textoTotalizador.TabIndex = 11;
@@ -158,17 +172,147 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 357);
+            this.label5.Location = new System.Drawing.Point(53, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Total das contas";
             // 
+            // comboContas
+            // 
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(53, 361);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(121, 21);
+            this.comboContas.TabIndex = 15;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
+            // textoTitularCombo
+            // 
+            this.textoTitularCombo.Location = new System.Drawing.Point(53, 398);
+            this.textoTitularCombo.Name = "textoTitularCombo";
+            this.textoTitularCombo.Size = new System.Drawing.Size(100, 20);
+            this.textoTitularCombo.TabIndex = 16;
+            // 
+            // textoNumeroCombo
+            // 
+            this.textoNumeroCombo.Location = new System.Drawing.Point(53, 436);
+            this.textoNumeroCombo.Name = "textoNumeroCombo";
+            this.textoNumeroCombo.Size = new System.Drawing.Size(100, 20);
+            this.textoNumeroCombo.TabIndex = 17;
+            this.textoNumeroCombo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textoSaldoCombo
+            // 
+            this.textoSaldoCombo.Location = new System.Drawing.Point(53, 472);
+            this.textoSaldoCombo.Name = "textoSaldoCombo";
+            this.textoSaldoCombo.Size = new System.Drawing.Size(100, 20);
+            this.textoSaldoCombo.TabIndex = 18;
+            // 
+            // textoValorComboBox
+            // 
+            this.textoValorComboBox.Location = new System.Drawing.Point(210, 471);
+            this.textoValorComboBox.Name = "textoValorComboBox";
+            this.textoValorComboBox.Size = new System.Drawing.Size(100, 20);
+            this.textoValorComboBox.TabIndex = 19;
+            // 
+            // botaoSacarComboBox
+            // 
+            this.botaoSacarComboBox.Location = new System.Drawing.Point(342, 436);
+            this.botaoSacarComboBox.Name = "botaoSacarComboBox";
+            this.botaoSacarComboBox.Size = new System.Drawing.Size(75, 23);
+            this.botaoSacarComboBox.TabIndex = 20;
+            this.botaoSacarComboBox.Text = "Sacar";
+            this.botaoSacarComboBox.UseVisualStyleBackColor = true;
+            this.botaoSacarComboBox.Click += new System.EventHandler(this.botaoSacarComboBox_Click);
+            // 
+            // botaoDepositarComboBox
+            // 
+            this.botaoDepositarComboBox.Location = new System.Drawing.Point(342, 468);
+            this.botaoDepositarComboBox.Name = "botaoDepositarComboBox";
+            this.botaoDepositarComboBox.Size = new System.Drawing.Size(75, 23);
+            this.botaoDepositarComboBox.TabIndex = 21;
+            this.botaoDepositarComboBox.Text = "Depositar";
+            this.botaoDepositarComboBox.UseVisualStyleBackColor = true;
+            this.botaoDepositarComboBox.Click += new System.EventHandler(this.botaoDepositarComboBox_Click);
+            // 
+            // destinoDaTransferencia
+            // 
+            this.destinoDaTransferencia.FormattingEnabled = true;
+            this.destinoDaTransferencia.Location = new System.Drawing.Point(594, 361);
+            this.destinoDaTransferencia.Name = "destinoDaTransferencia";
+            this.destinoDaTransferencia.Size = new System.Drawing.Size(121, 21);
+            this.destinoDaTransferencia.TabIndex = 22;
+            this.destinoDaTransferencia.SelectedIndexChanged += new System.EventHandler(this.destinoDaTransferencia_SelectedIndexChanged);
+            // 
+            // textoTitularDestino
+            // 
+            this.textoTitularDestino.Location = new System.Drawing.Point(594, 398);
+            this.textoTitularDestino.Name = "textoTitularDestino";
+            this.textoTitularDestino.Size = new System.Drawing.Size(100, 20);
+            this.textoTitularDestino.TabIndex = 23;
+            // 
+            // textoNumeroDestino
+            // 
+            this.textoNumeroDestino.Location = new System.Drawing.Point(594, 439);
+            this.textoNumeroDestino.Name = "textoNumeroDestino";
+            this.textoNumeroDestino.Size = new System.Drawing.Size(100, 20);
+            this.textoNumeroDestino.TabIndex = 24;
+            // 
+            // textoSaldoDestino
+            // 
+            this.textoSaldoDestino.Location = new System.Drawing.Point(594, 472);
+            this.textoSaldoDestino.Name = "textoSaldoDestino";
+            this.textoSaldoDestino.Size = new System.Drawing.Size(100, 20);
+            this.textoSaldoDestino.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(594, 325);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Conta destino";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(53, 325);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 13);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Conta origem";
+            // 
+            // botaoTransferir
+            // 
+            this.botaoTransferir.Location = new System.Drawing.Point(342, 398);
+            this.botaoTransferir.Name = "botaoTransferir";
+            this.botaoTransferir.Size = new System.Drawing.Size(75, 23);
+            this.botaoTransferir.TabIndex = 28;
+            this.botaoTransferir.Text = "Transferir";
+            this.botaoTransferir.UseVisualStyleBackColor = true;
+            this.botaoTransferir.Click += new System.EventHandler(this.botaoTransferir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 414);
+            this.ClientSize = new System.Drawing.Size(796, 522);
+            this.Controls.Add(this.botaoTransferir);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textoSaldoDestino);
+            this.Controls.Add(this.textoNumeroDestino);
+            this.Controls.Add(this.textoTitularDestino);
+            this.Controls.Add(this.destinoDaTransferencia);
+            this.Controls.Add(this.botaoDepositarComboBox);
+            this.Controls.Add(this.botaoSacarComboBox);
+            this.Controls.Add(this.textoValorComboBox);
+            this.Controls.Add(this.textoSaldoCombo);
+            this.Controls.Add(this.textoNumeroCombo);
+            this.Controls.Add(this.textoTitularCombo);
+            this.Controls.Add(this.comboContas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.botaoSacaPP);
             this.Controls.Add(this.botaoDepositaPP);
@@ -207,6 +351,20 @@
         private System.Windows.Forms.Button botaoDepositaPP;
         private System.Windows.Forms.Button botaoSacaPP;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboContas;
+        private System.Windows.Forms.TextBox textoTitularCombo;
+        private System.Windows.Forms.TextBox textoNumeroCombo;
+        private System.Windows.Forms.TextBox textoSaldoCombo;
+        private System.Windows.Forms.TextBox textoValorComboBox;
+        private System.Windows.Forms.Button botaoSacarComboBox;
+        private System.Windows.Forms.Button botaoDepositarComboBox;
+        private System.Windows.Forms.ComboBox destinoDaTransferencia;
+        private System.Windows.Forms.TextBox textoTitularDestino;
+        private System.Windows.Forms.TextBox textoNumeroDestino;
+        private System.Windows.Forms.TextBox textoSaldoDestino;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button botaoTransferir;
     }
 }
 
