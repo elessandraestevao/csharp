@@ -56,6 +56,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.botaoTransferir = new System.Windows.Forms.Button();
+            this.botaoImposto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -294,11 +295,22 @@
             this.botaoTransferir.UseVisualStyleBackColor = true;
             this.botaoTransferir.Click += new System.EventHandler(this.botaoTransferir_Click);
             // 
+            // botaoImposto
+            // 
+            this.botaoImposto.Location = new System.Drawing.Point(667, 39);
+            this.botaoImposto.Name = "botaoImposto";
+            this.botaoImposto.Size = new System.Drawing.Size(75, 23);
+            this.botaoImposto.TabIndex = 29;
+            this.botaoImposto.Text = "Imposto";
+            this.botaoImposto.UseVisualStyleBackColor = true;
+            this.botaoImposto.Click += new System.EventHandler(this.botaoImposto_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 522);
+            this.Controls.Add(this.botaoImposto);
             this.Controls.Add(this.botaoTransferir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -365,6 +377,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button botaoTransferir;
+        private System.Windows.Forms.Button botaoImposto;
     }
 }
 

@@ -152,6 +152,20 @@ namespace CursoOOCaixaEletronico
             textoTitularDestino.Text = contas[destinoSelecionado].Titular;
             textoNumeroDestino.Text = Convert.ToString(contas[destinoSelecionado].Numero);
             textoSaldoDestino.Text = Convert.ToString(contas[destinoSelecionado].Saldo);            
+        }
+
+        private void botaoImposto_Click(object sender, EventArgs e)
+        {
+            ContaPoupanca cp = new ContaPoupanca();
+            cp.Deposita(100.0);
+
+            SeguroDeVida sv = new SeguroDeVida();
+
+            GerenciadorDeImposto gi = new GerenciadorDeImposto();
+            gi.Adiciona(cp);
+            gi.Adiciona(sv);
+
+            MessageBox.Show("O total é: " + gi.Total);
         }           
         
     }
