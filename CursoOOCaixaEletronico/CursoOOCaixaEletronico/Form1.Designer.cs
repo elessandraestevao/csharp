@@ -57,6 +57,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.botaoTransferir = new System.Windows.Forms.Button();
             this.botaoImposto = new System.Windows.Forms.Button();
+            this.botaoCadastrarNovaConta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -305,11 +306,22 @@
             this.botaoImposto.UseVisualStyleBackColor = true;
             this.botaoImposto.Click += new System.EventHandler(this.botaoImposto_Click);
             // 
+            // botaoCadastrarNovaConta
+            // 
+            this.botaoCadastrarNovaConta.Location = new System.Drawing.Point(667, 96);
+            this.botaoCadastrarNovaConta.Name = "botaoCadastrarNovaConta";
+            this.botaoCadastrarNovaConta.Size = new System.Drawing.Size(75, 23);
+            this.botaoCadastrarNovaConta.TabIndex = 30;
+            this.botaoCadastrarNovaConta.Text = "Nova Conta";
+            this.botaoCadastrarNovaConta.UseVisualStyleBackColor = true;
+            this.botaoCadastrarNovaConta.Click += new System.EventHandler(this.botaoCadastrarNovaConta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 522);
+            this.Controls.Add(this.botaoCadastrarNovaConta);
             this.Controls.Add(this.botaoImposto);
             this.Controls.Add(this.botaoTransferir);
             this.Controls.Add(this.label7);
@@ -378,6 +390,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button botaoTransferir;
         private System.Windows.Forms.Button botaoImposto;
+        private System.Windows.Forms.Button botaoCadastrarNovaConta;
     }
 }
 

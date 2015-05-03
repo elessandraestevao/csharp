@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoOOCaixaEletronico
+namespace Capitulo4Formularios
 {
     class ContaCorrente : Conta
     {
@@ -15,9 +15,9 @@ namespace CursoOOCaixaEletronico
             ContaCorrente.TotalDeContas++;
         }
 
-        public static int ProximaConta()
+        public static int Contador()
         {
-            return ContaCorrente.TotalDeContas + 1;
+            return ContaCorrente.TotalDeContas -1;
         }
     }
 }

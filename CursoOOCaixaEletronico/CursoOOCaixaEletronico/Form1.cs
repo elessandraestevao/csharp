@@ -24,9 +24,9 @@ namespace CursoOOCaixaEletronico
 
         private void Form1_Load(object sender, EventArgs e)
         {            
-            this.cc.Titular = "Victor";
+           /* this.cc.Titular = "Victor";
             this.cc.Deposita(250.0);
-            this.cc.Numero = 1;
+            this.cc.Numero = 1;*/
 
             this.cp.Titular = "Victor";
             this.cp.Deposita(100.0);
@@ -34,35 +34,37 @@ namespace CursoOOCaixaEletronico
 
             this.MostraConta(cc);
 
-            //Exercicio do comboBox
-            contas = new Conta[4];
-            contas[0] = new Conta();
+           
+ //Exercicio do comboBox
+            contas = new Conta[20];
+            contas[0] = new ContaCorrente();
             contas[0].Titular = "Adriana";
             contas[0].Numero = 3;
             contas[0].Deposita(8000.0);
 
-            contas[1] = new Conta();
+            contas[1] = new ContaCorrente();
             contas[1].Titular = "Beatriz";
             contas[1].Numero = 4;
             contas[1].Deposita(900.0);
 
-            contas[2] = new Conta();
+            contas[2] = new ContaCorrente();
             contas[2].Titular = "Camila";
             contas[2].Numero = 5;
             contas[2].Deposita(2000.0);
 
-            contas[3] = new Conta();
+            contas[3] = new ContaCorrente();
             contas[3].Titular = "Daniel";
             contas[3].Numero = 6;
             contas[3].Deposita(1000.0);
-
-            foreach(Conta co in contas)
+           foreach (Conta co in contas)
             {
+                //MessageBox.Show(co.Titular + " ");
+                //MessageBox.Show(Convert.ToString(ContaCorrente.ProximaConta()));
                 comboContas.Items.Add(co.Titular);
                 destinoDaTransferencia.Items.Add(co.Titular);
-            }
+            }       
             
-        }
+        }       
 
         private void botaoDepositaCC_Click(object sender, EventArgs e)
         {
@@ -166,7 +168,19 @@ namespace CursoOOCaixaEletronico
             gi.Adiciona(sv);
 
             MessageBox.Show("O total é: " + gi.Total);
-        }           
+        } 
+        
+        public void CadastraNovaConta(Conta cta)
+        {
+            int qtde = ContaCorrente.ProximaConta();
+            this.contas[qtde - 1] = cta;            
+        }
+
+        private void botaoCadastrarNovaConta_Click(object sender, EventArgs e)
+        {
+            CadastroDeConta cadastroConta = new CadastroDeConta(this);
+            cadastroConta.ShowDialog();
+        }
         
     }
 }
