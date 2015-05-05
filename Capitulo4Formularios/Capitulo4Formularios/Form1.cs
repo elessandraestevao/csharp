@@ -14,6 +14,7 @@ namespace Capitulo4Formularios
     {
         Conta[] contas = null;
         int qtdeContas;
+        private List<Conta> listaContas = new List<Conta>();
         public Form1()
         {
             InitializeComponent();
@@ -52,7 +53,14 @@ namespace Capitulo4Formularios
             contas[3].Deposita(1000.0);
             qtdeContas++;
 
-            PreencheComboContas();         
+            PreencheComboContas();
+
+            this.listaContas = new List<Conta>();
+            foreach(Conta c in this.contas){
+                listaContas.Add(c);
+            }
+            
+
         }
 
         private void PreencheComboContas()
@@ -125,6 +133,19 @@ namespace Capitulo4Formularios
             textoNumero.Text = "";
             textoSaldo.Text = "";
             textoTitular.Text = "";
+        }
+
+        private void botaoLINQ_Click(object sender, EventArgs e)
+        {
+            var filtrados = this.listaContas.Where(c => c.Numero < 1000 && c.Saldo > 500.0);
+            ///double filtrados = this.listaContas.Min(d => d.Saldo);
+            //int qtde = this.listaContas.Count(c => c.Saldo > 500.0);
+            //MessageBox.Show(qtde.ToString());
+
+           foreach (Conta c in filtrados)
+            {
+                MessageBox.Show(c.Titular);
+            }
         }
     }
 }

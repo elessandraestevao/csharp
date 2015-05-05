@@ -34,6 +34,7 @@
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.botaoNovaConta = new System.Windows.Forms.Button();
             this.botaoRemoverConta = new System.Windows.Forms.Button();
+            this.botaoLINQ = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboContas
@@ -87,11 +88,22 @@
             this.botaoRemoverConta.UseVisualStyleBackColor = true;
             this.botaoRemoverConta.Click += new System.EventHandler(this.botaoRemoverConta_Click);
             // 
+            // botaoLINQ
+            // 
+            this.botaoLINQ.Location = new System.Drawing.Point(272, 226);
+            this.botaoLINQ.Name = "botaoLINQ";
+            this.botaoLINQ.Size = new System.Drawing.Size(75, 23);
+            this.botaoLINQ.TabIndex = 6;
+            this.botaoLINQ.Text = "LINQ";
+            this.botaoLINQ.UseVisualStyleBackColor = true;
+            this.botaoLINQ.Click += new System.EventHandler(this.botaoLINQ_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(411, 261);
+            this.Controls.Add(this.botaoLINQ);
             this.Controls.Add(this.botaoRemoverConta);
             this.Controls.Add(this.botaoNovaConta);
             this.Controls.Add(this.textoSaldo);
@@ -114,6 +126,7 @@
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.Button botaoNovaConta;
         private System.Windows.Forms.Button botaoRemoverConta;
+        private System.Windows.Forms.Button botaoLINQ;
     }
 }
 

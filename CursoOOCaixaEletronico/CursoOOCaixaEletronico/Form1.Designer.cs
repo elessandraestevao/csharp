@@ -58,6 +58,7 @@
             this.botaoTransferir = new System.Windows.Forms.Button();
             this.botaoImposto = new System.Windows.Forms.Button();
             this.botaoCadastrarNovaConta = new System.Windows.Forms.Button();
+            this.botaoLINQ = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -316,11 +317,22 @@
             this.botaoCadastrarNovaConta.UseVisualStyleBackColor = true;
             this.botaoCadastrarNovaConta.Click += new System.EventHandler(this.botaoCadastrarNovaConta_Click);
             // 
+            // botaoLINQ
+            // 
+            this.botaoLINQ.Location = new System.Drawing.Point(667, 167);
+            this.botaoLINQ.Name = "botaoLINQ";
+            this.botaoLINQ.Size = new System.Drawing.Size(75, 23);
+            this.botaoLINQ.TabIndex = 31;
+            this.botaoLINQ.Text = "LINQ";
+            this.botaoLINQ.UseVisualStyleBackColor = true;
+            this.botaoLINQ.Click += new System.EventHandler(this.botaoLINQ_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 522);
+            this.Controls.Add(this.botaoLINQ);
             this.Controls.Add(this.botaoCadastrarNovaConta);
             this.Controls.Add(this.botaoImposto);
             this.Controls.Add(this.botaoTransferir);
@@ -391,6 +403,7 @@
         private System.Windows.Forms.Button botaoTransferir;
         private System.Windows.Forms.Button botaoImposto;
         private System.Windows.Forms.Button botaoCadastrarNovaConta;
+        private System.Windows.Forms.Button botaoLINQ;
     }
 }
 

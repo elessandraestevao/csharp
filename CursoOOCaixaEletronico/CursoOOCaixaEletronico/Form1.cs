@@ -181,6 +181,18 @@ namespace CursoOOCaixaEletronico
             CadastroDeConta cadastroConta = new CadastroDeConta(this);
             cadastroConta.ShowDialog();
         }
+
+        private void botaoLINQ_Click(object sender, EventArgs e)
+        {
+            var filtrados = from c in this.contas
+                            where c.Titular.StartsWith("A")
+                            select c;
+
+            foreach (Conta c in filtrados)
+            {
+                MessageBox.Show(c.Titular);
+            }
+        }
         
     }
 }
